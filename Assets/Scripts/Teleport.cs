@@ -17,22 +17,22 @@ public class Teleport : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-     if (gvrStatus)
+        if (gvrStatus)
         {
             gvrTimer += Time.deltaTime;
-            imgTeleport.fillAmount = gvrTimer/totalTime;
+            imgTeleport.fillAmount = gvrTimer / totalTime;
         }
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
-        if(Physics.Raycast(ray, out _hit, distanceOfRay))
+        if (Physics.Raycast(ray, out _hit, distanceOfRay))
         {
-            if(imgTeleport.fillAmount == 1 && _hit.transform.CompareTag("Teleport"))
+            if (imgTeleport.fillAmount == 1 && _hit.transform.CompareTag("Teleport"))
             {
                 _hit.transform.gameObject.GetComponent<Move>().TeleportRig();
             }

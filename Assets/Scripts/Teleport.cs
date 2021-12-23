@@ -14,13 +14,6 @@ public class Teleport : MonoBehaviour
     public int distanceOfRay = 10;
     private RaycastHit _hit;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (gvrStatus)

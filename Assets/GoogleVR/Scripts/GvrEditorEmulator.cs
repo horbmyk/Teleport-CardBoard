@@ -101,33 +101,35 @@ public class GvrEditorEmulator : MonoBehaviour
         }
 
         bool rolled = false;
-        if (CanChangeYawPitch())
-        {
-            GvrCursorHelper.HeadEmulationActive = true;
-            mouseX += Input.GetAxis(AXIS_MOUSE_X) * 5;
-            if (mouseX <= -180)
-            {
-                mouseX += 360;
-            }
-            else if (mouseX > 180)
-            {
-                mouseX -= 360;
-            }
 
-            mouseY -= Input.GetAxis(AXIS_MOUSE_Y) * 2.4f;
-            mouseY = Mathf.Clamp(mouseY, -85, 85);
-        }
-        else if (CanChangeRoll())
+        //if (CanChangeYawPitch())
+        //{
+        //GvrCursorHelper.HeadEmulationActive = true;
+
+        mouseX += Input.GetAxis(AXIS_MOUSE_X) * 5;
+        if (mouseX <= -180)
         {
-            GvrCursorHelper.HeadEmulationActive = true;
-            rolled = true;
-            mouseZ += Input.GetAxis(AXIS_MOUSE_X) * 5;
-            mouseZ = Mathf.Clamp(mouseZ, -85, 85);
+            mouseX += 360;
         }
-        else
+        else if (mouseX > 180)
         {
-            GvrCursorHelper.HeadEmulationActive = false;
+            mouseX -= 360;
         }
+
+        mouseY -= Input.GetAxis(AXIS_MOUSE_Y) * 2.4f;
+        mouseY = Mathf.Clamp(mouseY, -85, 85);
+        //}
+        //else if (CanChangeRoll())
+        //{
+        //    GvrCursorHelper.HeadEmulationActive = true;
+        //    rolled = true;
+        //    mouseZ += Input.GetAxis(AXIS_MOUSE_X) * 5;
+        //    mouseZ = Mathf.Clamp(mouseZ, -85, 85);
+        //}
+        //else
+        //{
+        //    GvrCursorHelper.HeadEmulationActive = false;
+        //}
 
         if (!rolled)
         {

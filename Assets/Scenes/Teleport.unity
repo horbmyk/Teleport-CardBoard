@@ -175,7 +175,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1513400617}
-          m_MethodName: GVRoff
+          m_MethodName: GVROff
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8fdcd7c7fd34f45b668a4aac5a2547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rig: {fileID: 1513400615}
+  _teleportTransform: {fileID: 225101808}
 --- !u!136 &225101805
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -307,7 +307,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587027031}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.41, y: 0, z: 1.1}
+  m_LocalPosition: {x: 19.847, y: 0, z: -0.552}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1455668923}
@@ -386,6 +386,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3844c9c15c449a429f80826ffd8f384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigController: {fileID: 1513400617}
+  _cylinderMeshRenderer: {fileID: 587027034}
+  _cylinderTransform: {fileID: 587027032}
 --- !u!1001 &663650321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -471,7 +474,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705830723}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -20.71}
+  m_LocalPosition: {x: 1.08, y: 0, z: -19.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1455668923}
@@ -550,6 +553,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3844c9c15c449a429f80826ffd8f384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigController: {fileID: 1513400617}
+  _cylinderMeshRenderer: {fileID: 705830726}
+  _cylinderTransform: {fileID: 705830724}
 --- !u!1 &715591581
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,7 +610,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1513400617}
-          m_MethodName: GVRoff
+          m_MethodName: GVROff
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -626,7 +632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8fdcd7c7fd34f45b668a4aac5a2547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rig: {fileID: 1513400615}
+  _teleportTransform: {fileID: 715591587}
 --- !u!136 &715591584
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -945,7 +951,7 @@ GameObject:
   - component: {fileID: 1118343487}
   - component: {fileID: 1118343486}
   m_Layer: 0
-  m_Name: Image
+  m_Name: AIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1355,6 +1361,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3844c9c15c449a429f80826ffd8f384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigController: {fileID: 1513400617}
+  _cylinderMeshRenderer: {fileID: 1455668921}
+  _cylinderTransform: {fileID: 1455668923}
 --- !u!1 &1513400615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,9 +1408,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b49995353dd6da149b4021333cf2f3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imgTeleport: {fileID: 1118343486}
-  totalTime: 2
-  distanceOfRay: 50
+  DistanceOfRay: 60
+  _rig: {fileID: 1513400615}
+  _aIM: {fileID: 1118343486}
 --- !u!1 &1589834335
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,7 +1465,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1513400617}
-          m_MethodName: GVRoff
+          m_MethodName: GVROff
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1478,7 +1487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8fdcd7c7fd34f45b668a4aac5a2547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rig: {fileID: 1513400615}
+  _teleportTransform: {fileID: 1589834341}
 --- !u!136 &1589834338
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1582,7 +1591,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595389917}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.39, y: 0, z: -21.43}
+  m_LocalPosition: {x: 16.36, y: 0, z: -20.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1455668923}
@@ -1661,6 +1670,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3844c9c15c449a429f80826ffd8f384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigController: {fileID: 1513400617}
+  _cylinderMeshRenderer: {fileID: 1595389920}
+  _cylinderTransform: {fileID: 1595389918}
 --- !u!1 &1629383419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,7 +1805,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1513400617}
-          m_MethodName: GVRoff
+          m_MethodName: GVROff
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1815,4 +1827,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8fdcd7c7fd34f45b668a4aac5a2547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rig: {fileID: 1513400615}
+  _teleportTransform: {fileID: 1629383423}
